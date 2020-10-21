@@ -142,7 +142,11 @@ function registerButtonHandlers() {
           .sendMessages([
             {
               type: "text",
-              text: "You've successfully sent a message! Hooray!",
+              text: "折價序號",
+            },
+            {
+              type: "text",
+              text: "A1223456",
             },
           ])
           .then(function () {
