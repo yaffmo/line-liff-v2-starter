@@ -61,20 +61,6 @@ function initializeLiff(myLiffId) {
         .classList.remove("hidden");
     });
 }
-if (liff.isInClient()) {
-  liff
-    .sendMessages([
-      {
-        type: "text",
-        text: "折價序號",
-      },
-      {
-        type: "text",
-        text: "A1223456",
-      },
-    ])
-    .then(liff.closeWindow());
-}
 
 /**
  * Initialize the app by calling functions handling individual app components
@@ -171,7 +157,20 @@ function registerButtonHandlers() {
   //       //   });
   //     }
   //   });
-
+  if (liff.isInClient()) {
+    liff
+      .sendMessages([
+        {
+          type: "text",
+          text: "折價序號",
+        },
+        {
+          type: "text",
+          text: "A1223456",
+        },
+      ])
+      .then(liff.closeWindow());
+  }
   // scanCode call
   document
     .getElementById("scanQrCodeButton")
