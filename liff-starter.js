@@ -1,19 +1,4 @@
-window.onload = function () {
-  if (liff.isInClient()) {
-    liff
-      .sendMessages([
-        {
-          type: "text",
-          text: "折價序號",
-        },
-        {
-          type: "text",
-          text: "A1223456",
-        },
-      ])
-      .then(liff.closeWindow());
-  }
-
+cwindow.onload = function () {
   const useNodeJS = false; // if you are not using a node server, set this value to false
   const defaultLiffId = "1654926321-xwKZv1pe"; // change the default LIFF value if you are not using a node server
 
@@ -75,6 +60,20 @@ window.onload = function () {
     //     .getElementById("liffInitErrorMessage")
     //     .classList.remove("hidden");
     // });
+  }
+  if (liff.isInClient()) {
+    liff
+      .sendMessages([
+        {
+          type: "text",
+          text: "折價序號",
+        },
+        {
+          type: "text",
+          text: "A1223456",
+        },
+      ])
+      .then(liff.closeWindow());
   }
 };
 // // /**
