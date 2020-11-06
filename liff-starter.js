@@ -261,6 +261,8 @@ function registerButtonHandlers() {
             },
           ])
           .then(() => {
+            document.getElementById("shareTargetPickerMessage").textContent =
+              "分享成功";
             liff.closeWindow();
           })
 
