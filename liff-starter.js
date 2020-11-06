@@ -157,20 +157,20 @@ function registerButtonHandlers() {
   //       //   });
   //     }
   //   });
-  if (liff.isInClient()) {
-    liff
-      .sendMessages([
-        {
-          type: "text",
-          text: "折價序號",
-        },
-        {
-          type: "text",
-          text: "A1223456",
-        },
-      ])
-      .then(liff.closeWindow());
-  }
+  // if (liff.isInClient()) {
+  //   liff
+  //     .sendMessages([
+  //       {
+  //         type: "text",
+  //         text: "折價序號",
+  //       },
+  //       {
+  //         type: "text",
+  //         text: "A1223456",
+  //       },
+  //     ])
+  //     .then(liff.closeWindow());
+  // }
   // scanCode call
   document
     .getElementById("scanQrCodeButton")
@@ -250,7 +250,7 @@ function registerButtonHandlers() {
           .shareTargetPicker([
             {
               type: "text",
-              text: "Hello, World!",
+              text: "https://liff.line.me/1654926321-xwKZv1pe",
             },
           ])
           .then(
