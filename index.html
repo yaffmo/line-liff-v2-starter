@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- <div id="liffAppContent"> -->
-    <!-- ACTION BUTTONS -->
-    <div class="buttonGroup">
-      <!-- <div class="buttonRow">
+    <div id="liffAppContent">
+      <!-- ACTION BUTTONS -->
+      <div class="buttonGroup">
+        <!-- <div class="buttonRow">
           <button id="openWindowButton">Open External Window</button>
           <button id="closeWindowButton">Close LIFF App</button>
         </div>
@@ -22,13 +22,13 @@
           <button id="getAccessToken">Get Access Token</button>
           <button id="getProfileButton">Get Profile</button>
         </div> -->
-      <div class="buttonRow">
-        <button id="shareTargetPicker">分享給朋友</button>
+        <div class="buttonRow">
+          <button id="shareTargetPicker">分享給朋友</button>
+        </div>
       </div>
-    </div>
-    <div id="shareTargetPickerMessage"></div>
-    <!-- ACCESS TOKEN DATA -->
-    <!-- <div id="accessTokenData" class="hidden textLeft">
+      <div id="shareTargetPickerMessage"></div>
+      <!-- ACCESS TOKEN DATA -->
+      <!-- <div id="accessTokenData" class="hidden textLeft">
         <h2>Access Token</h2>
         <a href="#" onclick="toggleAccessToken()">Close Access Token</a>
         <table>
@@ -38,8 +38,8 @@
           </tr>
         </table>
       </div> -->
-    <!-- SCAN QR RESULT -->
-    <!-- <div id="scanQr" class="hidden textLeft">
+      <!-- SCAN QR RESULT -->
+      <!-- <div id="scanQr" class="hidden textLeft">
         <h2>QR Code reader</h2>
         <a href="#" onclick="toggleQrCodeReader()"
           >Close QR Code Reader Result</a
@@ -51,8 +51,8 @@
           </tr>
         </table>
       </div> -->
-    <!-- PROFILE INFO-->
-    <!-- <div id="profileInfo" class="hidden textLeft">
+      <!-- PROFILE INFO-->
+      <!-- <div id="profileInfo" class="hidden textLeft">
         <h2>Profile</h2>
         <a href="#" onclick="toggleProfileData()">Close Profile</a>
         <div id="profilePictureDiv"></div>
@@ -71,8 +71,8 @@
           </tr>
         </table>
       </div> -->
-    <!-- LIFF DATA -->
-    <!-- <div id="liffData">
+      <!-- LIFF DATA -->
+      <div id="liffData">
         <h2 id="liffDataHeader" class="textLeft">LIFF Data</h2>
         <table>
           <tr>
@@ -100,9 +100,9 @@
             <td id="isLoggedIn" class="textLeft"></td>
           </tr>
         </table>
-      </div> -->
-    <!-- LOGIN LOGOUT BUTTONS -->
-    <!-- <div class="buttonGroup">
+      </div>
+      <!-- LOGIN LOGOUT BUTTONS -->
+      <div class="buttonGroup">
         <button id="liffLoginButton">Log in</button>
         <button id="liffLogoutButton">Log out</button>
       </div>
@@ -123,9 +123,9 @@
           </p>
         </div>
       </div>
-    </div> -->
+    </div>
     <!-- LIFF ID ERROR -->
-    <!-- <div id="liffIdErrorMessage" class="hidden">
+    <div id="liffIdErrorMessage" class="hidden">
       <p>You have not assigned any value for LIFF ID.</p>
       <p>
         If you are running the app using Node.js, please set the LIFF ID as an
@@ -154,20 +154,20 @@
           >Initializing the LIFF app</a
         >.
       </p>
-    </div> -->
+    </div>
     <!-- LIFF INIT ERROR -->
-    <!-- <div id="liffInitErrorMessage" class="hidden">
+    <div id="liffInitErrorMessage" class="hidden">
       <p>Something went wrong with LIFF initialization.</p>
       <p>
         LIFF initialization can fail if a user clicks "Cancel" on the "Grant
         permission" screen, or if an error occurs in the process of
         <code>liff.init()</code>.
       </p>
-    </div> -->
+    </div>
     <!-- NODE.JS LIFF ID ERROR -->
-    <!-- <div id="nodeLiffIdErrorMessage" class="hidden">
+    <div id="nodeLiffIdErrorMessage" class="hidden">
       <p>Unable to receive the LIFF ID as an environment variable.</p>
-    </div> -->
+    </div>
     <script
       charset="utf-8"
       src="https://static.line-scdn.net/liff/edge/2/sdk.js"

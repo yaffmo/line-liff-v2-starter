@@ -33,12 +33,12 @@ window.onload = function () {
 //  * @param {string} myLiffId The LIFF ID of the selected element
 //  */
 function initializeLiffOrDie(myLiffId) {
-  // if (!myLiffId) {
-  //   document.getElementById("liffAppContent").classList.add("hidden");
-  //   document.getElementById("liffIdErrorMessage").classList.remove("hidden");
-  // } else {
-  initializeLiff(myLiffId);
-  // }
+  if (!myLiffId) {
+    document.getElementById("liffAppContent").classList.add("hidden");
+    document.getElementById("liffIdErrorMessage").classList.remove("hidden");
+  } else {
+    initializeLiff(myLiffId);
+  }
 }
 
 /**
@@ -53,13 +53,13 @@ function initializeLiff(myLiffId) {
     .then(() => {
       // start to use LIFF's api
       initializeApp();
+    })
+    .catch((err) => {
+      document.getElementById("liffAppContent").classList.add("hidden");
+      document
+        .getElementById("liffInitErrorMessage")
+        .classList.remove("hidden");
     });
-  // .catch((err) => {
-  //   document.getElementById("liffAppContent").classList.add("hidden");
-  //   document
-  //     .getElementById("liffInitErrorMessage")
-  //     .classList.remove("hidden");
-  // });
 }
 
 /**
@@ -71,11 +71,11 @@ function initializeApp() {
   registerButtonHandlers();
 
   // check if the user is logged in/out, and disable inappropriate button
-  // if (liff.isLoggedIn()) {
-  //   document.getElementById("liffLoginButton").disabled = true;
-  // } else {
-  //   document.getElementById("liffLogoutButton").disabled = true;
-  // }
+  if (liff.isLoggedIn()) {
+    document.getElementById("liffLoginButton").disabled = true;
+  } else {
+    document.getElementById("liffLogoutButton").disabled = true;
+  }
 }
 
 /**
