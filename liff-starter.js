@@ -246,32 +246,31 @@ function registerButtonHandlers() {
     .getElementById("shareTargetPicker")
     .addEventListener("click", function () {
       if (liff.isApiAvailable("shareTargetPicker")) {
-        liff.shareTargetPicker([
-          {
-            type: "image",
-            originalContentUrl:
-              "https://pic.pimg.tw/ellenlee0409/1566550658-4259557930_wn.jpg",
-            previewImageUrl:
-              "https://pic.pimg.tw/ellenlee0409/1566550658-4259557930_wn.jpg",
-          },
-          {
-            type: "text",
-            text: "認同請分享\nhttps://liff.line.me/1654926321-xwKZv1pe",
-          },
-        ]);
+        liff
+          .shareTargetPicker([
+            {
+              type: "image",
+              originalContentUrl:
+                "https://pic.pimg.tw/ellenlee0409/1566550658-4259557930_wn.jpg",
+              previewImageUrl:
+                "https://pic.pimg.tw/ellenlee0409/1566550658-4259557930_wn.jpg",
+            },
+            {
+              type: "text",
+              text: "認同請分享\nhttps://liff.line.me/1654926321-xwKZv1pe",
+            },
+          ])
+          .then(
+            (document.getElementById("shareTargetPickerMessage").textContent =
+              "Share target picker was launched.")
+          )
 
-        // .then(
-        //   (document.getElementById("shareTargetPickerMessage").textContent =
-        //     "Share target picker was launched.")
-        // )
-        //
-        // .catch(function (res) {
-        //   document.getElementById("shareTargetPickerMessage").textContent =
-        //     "Failed to launch share target picker.";
-        // });
+          .catch(function (res) {
+            document.getElementById("shareTargetPickerMessage").textContent =
+              "Failed to launch share target picker.";
+          });
       }
-    })
-    .then(liff.closeWindow());
+    });
 
   // login call, only when external browser is used
   document
