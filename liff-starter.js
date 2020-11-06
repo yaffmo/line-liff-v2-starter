@@ -260,10 +260,9 @@ function registerButtonHandlers() {
               text: "認同請分享\nhttps://liff.line.me/1654926321-xwKZv1pe",
             },
           ])
-          .then(
-            (document.getElementById("shareTargetPickerMessage").textContent =
-              "Share target picker was launched.")
-          )
+          .then(() => {
+            liff.closeWindow();
+          })
 
           .catch(function (res) {
             document.getElementById("shareTargetPickerMessage").textContent =
