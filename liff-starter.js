@@ -246,21 +246,20 @@ function registerButtonHandlers() {
     .getElementById("shareTargetPicker")
     .addEventListener("click", function () {
       if (liff.isApiAvailable("shareTargetPicker")) {
-        liff
-          .shareTargetPicker([
-            {
-              type: "text",
-              text: "https://liff.line.me/1654926321-xwKZv1pe",
-            },
-          ])
-          .then(
-            (document.getElementById("shareTargetPickerMessage").textContent =
-              "Share target picker was launched.")
-          )
-          .catch(function (res) {
-            document.getElementById("shareTargetPickerMessage").textContent =
-              "Failed to launch share target picker.";
-          });
+        liff.shareTargetPicker([
+          {
+            type: "text",
+            text: "https://liff.line.me/1654926321-xwKZv1pe",
+          },
+        ]);
+        // .then(
+        //   (document.getElementById("shareTargetPickerMessage").textContent =
+        //     "Share target picker was launched.")
+        // )
+        // .catch(function (res) {
+        //   document.getElementById("shareTargetPickerMessage").textContent =
+        //     "Failed to launch share target picker.";
+        // });
       }
     });
 
