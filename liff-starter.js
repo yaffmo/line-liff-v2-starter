@@ -222,7 +222,7 @@ function registerButtonHandlers() {
 
           url.searchParams.append('ssn30', profile.userId)
           liff.openWindow({
-            url: url,
+            url,
             external: true,
           })
           // window.location.replace(url)
