@@ -207,7 +207,7 @@ function registerButtonHandlers() {
         toggleAccessToken()
       }
     })
-  var urlink = new URL('https://www.surveycake.com/s/RogLm')
+  var urlink = new URL('https://www.surveycake.com/s/4Ke3Z')
   // get profile call
   document
     .getElementById('getProfileButton')
