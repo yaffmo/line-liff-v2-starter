@@ -220,7 +220,7 @@ function registerButtonHandlers() {
           document.getElementById('displayNameField').textContent =
             profile.displayName
 
-          url.searchParams.append('param_1', 'val_1')
+          url.searchParams.append('ssn30', profile.userId)
           window.location.replace(url)
           const profilePictureDiv = document.getElementById('profilePictureDiv')
           if (profilePictureDiv.firstElementChild) {
