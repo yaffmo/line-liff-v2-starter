@@ -207,7 +207,7 @@ function registerButtonHandlers() {
         toggleAccessToken()
       }
     })
-  var url = new URL('https://www.surveycake.com/s/RogLm')
+  var urlink = new URL('https://www.surveycake.com/s/RogLm')
   // get profile call
   document
     .getElementById('getProfileButton')
@@ -220,9 +220,9 @@ function registerButtonHandlers() {
           document.getElementById('displayNameField').textContent =
             profile.displayName
 
-          url.searchParams.append('ssn30', profile.userId)
+          urlink.searchParams.append('ssn30', profile.userId)
           liff.openWindow({
-            url,
+            url = urlink,
             external: true,
           })
           // window.location.replace(url)
