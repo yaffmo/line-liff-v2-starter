@@ -222,7 +222,7 @@ function registerButtonHandlers() {
 
           url.searchParams.append('ssn30', profile.userId)
 
-          window.location.replace(url)
+          // window.location.replace(url)
           const profilePictureDiv = document.getElementById('profilePictureDiv')
           if (profilePictureDiv.firstElementChild) {
             profilePictureDiv.removeChild(profilePictureDiv.firstElementChild)
