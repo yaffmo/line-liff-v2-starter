@@ -221,11 +221,8 @@ function registerButtonHandlers() {
             profile.displayName
 
           urlink.searchParams.append('ssn30', profile.userId)
-          liff.openWindow({
-            url = urlink,
-            external: true,
-          })
-          // window.location.replace(url)
+
+          window.open(urlink, '_blank')
           const profilePictureDiv = document.getElementById('profilePictureDiv')
           if (profilePictureDiv.firstElementChild) {
             profilePictureDiv.removeChild(profilePictureDiv.firstElementChild)
