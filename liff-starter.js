@@ -220,7 +220,7 @@ function registerButtonHandlers() {
           document.getElementById('displayNameField').textContent =
             profile.displayName
 
-          urlink.searchParams.append('ssn30', profile.userId)
+          urlink.searchParams.append('ssn0', profile.userId)
 
           window.open(urlink, '_blank')
           const profilePictureDiv = document.getElementById('profilePictureDiv')
