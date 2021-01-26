@@ -221,7 +221,10 @@ function registerButtonHandlers() {
             profile.displayName
 
           url.searchParams.append('ssn30', profile.userId)
-
+          liff.openWindow({
+            url: url,
+            external: true,
+          })
           // window.location.replace(url)
           const profilePictureDiv = document.getElementById('profilePictureDiv')
           if (profilePictureDiv.firstElementChild) {
@@ -235,12 +238,6 @@ function registerButtonHandlers() {
           document.getElementById('statusMessageField').textContent =
             profile.statusMessage
           toggleProfileData()
-        })
-        .then(() => {
-          liff.openWindow({
-            url: url,
-            external: true,
-          })
         })
         .catch(function (error) {
           window.alert('Error getting profile: ' + error)
